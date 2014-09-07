@@ -1,0 +1,1 @@
+* * * * * flock -n /home/music/download_playlists.lock -c /home/music/download_playlists >> /home/music/download.log 2>&1

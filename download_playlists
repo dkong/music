@@ -1,0 +1,4 @@
+while read playlist;
+do
+	/usr/local/bin/youtube-dl --extract-audio --audio-format mp3 -o "/www/music/files/%(title)s.%(ext)s" --download-archive archive.log --write-info-json --exec 'touch {} && python generate_page.py /www/music/files files /www/music/index.html' $playlist
+done <playlists
