@@ -1,0 +1,11 @@
+apt-get -y update
+apt-get -y upgrade
+apt-get install htop ntp libav-tools nginx git
+sudo curl https://yt-dl.org/latest/youtube-dl -o /usr/local/bin/youtube-dl
+sudo chmod a+x /usr/local/bin/youtube-dl
+mkdir -p /www/music
+sudo vi /etc/ssh/sshd_config
+adduser music
+usermod -a -G www-data music
+chmod g+w /www/music/
+dpkg-reconfigure tzdata
